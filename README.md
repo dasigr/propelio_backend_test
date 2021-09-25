@@ -20,3 +20,7 @@ volumes: ['./:/usr/src/app']
 # To re-build
 docker-compose build
 ```
+
+## Usage
+
+The app is accessible at http://localhost:3000
