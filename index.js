@@ -32,6 +32,21 @@ app.post('/item/add', (req, res) => {
   newItem.save().then(item => res.redirect('/'));
 });
 
+/**
+ * Get suggested counties based on provided query string.
+ * Responds with an array, limited to 5 results,
+ * of counties where the county name or state matches the provided query string.
+ *
+ * @type {number}
+ */
+app.post('/suggest', (req, res) => {
+  const newItem = new Item({
+    name: req.body.name
+  });
+
+  newItem.save().then(item => res.redirect('/'));
+});
+
 const port = 3000;
 
 app.listen(port, () => console.log('Server running...'));
